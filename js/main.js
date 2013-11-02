@@ -59,12 +59,14 @@
   light.castShadow = true;
   light.position.set(0, 1000, -400);
 
+
   //stats 
   stats = new Stats();
   stats.domElement.style.position = 'absolute';
   stats.domElement.style.top = '0px';
   stats.domElement.style.zIndex = 100;
   container.appendChild( stats.domElement );
+
 
   scene.add(light);
 
@@ -74,7 +76,9 @@
     renderer.render(scene, camera);
     controls.update();
     requestAnimationFrame(animate);
+
     stats.update();
+
   }
 
 })();
