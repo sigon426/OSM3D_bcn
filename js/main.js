@@ -69,7 +69,18 @@
   stats.domElement.style.left = '0px';
   stats.domElement.style.top = '0px';
   stats.domElement.style.zIndex = 100;
+  
+  document.body.appendChild( stats.domElement );
 
+  setInterval( function () {
+
+      stats.begin();
+
+      // your code goes here
+
+      stats.end();
+
+  }, 1000 / 60 );
 
 
   scene.add(light);
