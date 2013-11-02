@@ -59,6 +59,19 @@
   light.castShadow = true;
   light.position.set(0, 1000, -400);
 
+
+  //stats 
+  var stats = new Stats();
+  stats.setMode(1); // 0: fps, 1: ms
+
+  // Align top-left
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  stats.domElement.style.zIndex = 100;
+
+
+
   scene.add(light);
 
   animate();
@@ -67,6 +80,9 @@
     renderer.render(scene, camera);
     controls.update();
     requestAnimationFrame(animate);
+
+    stats.update();
+
   }
 
 })();
