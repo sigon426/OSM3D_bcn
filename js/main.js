@@ -3,17 +3,19 @@
   var viewport = document.querySelector('.viewport');
 
   var scene, camera, renderer, loader, light, controls;
-
+  
+  // set the scene size
   var WIDTH = window.innerWidth,
       HEIGHT = window.innerHeight;
-
+  // set some camera attributes
   var VIEW_ANGLE = 45,
       ASPECT = WIDTH / HEIGHT,
       NEAR = 1,
       FAR = 10000;
-
+  //create a scene
   scene = new THREE.Scene();
-
+  
+  // create a WebGL renderer, camera
   renderer = new THREE.WebGLRenderer({antialias: true});
   renderer.shadowMapEnabled = true;
   renderer.shadowMapSoft = true;
@@ -21,14 +23,20 @@
   renderer.shadowMapAutoUpdate = true;
 
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
+  
+  // the camera starts at 0,0,0 (change x y z....)
   camera.position.y = 1000;
 
+  // add the camera to the scene
   scene.add(camera);
 
   controls = new THREE.OrbitControls(camera);
-
+  
+  // start the renderer
   renderer.setSize(WIDTH, HEIGHT);
-
+  
+  // attach the render-supplied DOM element 
+  //$container.append(renderer.domElement);
   viewport.appendChild(renderer.domElement);
 
   loader = new THREE.JSONLoader();
@@ -46,6 +54,7 @@
     scene.add(mesh);
   });
 
+  //lights
   light = new THREE.DirectionalLight(0xffffff);
   light.shadowCameraTop = -1000;
   light.shadowCameraLeft = -1000;
@@ -88,6 +97,7 @@
   animate();
 
   function animate() {
+    // draw!
     renderer.render(scene, camera);
     controls.update();
     requestAnimationFrame(animate);
