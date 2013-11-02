@@ -1,9 +1,42 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <title>BCN 3D</title>
   <meta charset="UTF-8">
+  <style>
+      body {
+              color: #000;
+              font-family:Monospace;
+              font-size:13px;
+              text-align:center;
+              font-weight: bold;
+
+              background-color: #fff;
+              margin: 0px;
+              overflow: hidden;
+      }
+
+      #info {
+              color:#000;
+              position: absolute;
+              top: 0px; width: 100%;
+              padding: 5px;
+
+      }
+
+      a {
+              color: red;
+      }
+  </style>
 </head>
 <body>
+  <div id="info">
+    <h3>Port Olimpic in 3D, Barcelona (OSM and three.js)</h3>
+    <p>Controls:</p>
+    <p>Orbit - left mouse / touch: one finger move</p>
+    <p>Zoom - middle mouse, or mousewheel / touch: two finger spread or squish</p>
+    <p>Pan - right mouse, or arrow keys / touch: three finter swipe</p>
+  </div>
   <div class="viewport"></div>
 
   <script src="build/three.min.js"></script>
