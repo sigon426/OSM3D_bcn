@@ -25,8 +25,11 @@
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
   // the camera starts at 0,0,0 (change x y z....)
-  camera.position.y = 1700;
+  camera.position.y = 1800;
   camera.position.x = 200;
+
+
+
 
   // add the camera to the scene
   scene.add(camera);
@@ -106,6 +109,9 @@
     requestAnimationFrame(animate);
 
     //stats.update();
+    console.log("camera.position.x: ", camera.position.x);
+    console.log("camera.position.y: ", camera.position.y);
+    console.log("camera.position.z: ", camera.position.z);
 
   }
 
