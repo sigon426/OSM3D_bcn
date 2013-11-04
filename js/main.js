@@ -34,7 +34,7 @@
 
   controls = new THREE.OrbitControls(camera);
   //How far you can orbit vertically, upper and lower limits.
-  controls.maxPolarAngle = Math.PI/2; 
+  controls.maxPolarAngle = Math.PI/2.1; 
   
   // start the renderer
   renderer.setSize(WIDTH, HEIGHT);
