@@ -26,7 +26,7 @@
   
   // the camera starts at 0,0,0 (change x y z....)
   camera.position.y = 1500;
-  camera.position.x = 700;
+  camera.position.x = 500;
 
   // add the camera to the scene
   scene.add(camera);
