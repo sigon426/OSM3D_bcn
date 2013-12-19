@@ -154,7 +154,7 @@
 	},
 
 	{
-	"DbgColor" : 5131854,
+	"DbgColor" : 6737100,
 	"DbgIndex" : 23,
 	"DbgName" : "WATER_0"
 	},
@@ -190,7 +190,7 @@
 	},
 
 	{
-	"DbgColor" : 5131854,
+	"DbgColor" : 6737100,
 	"DbgIndex" : 29,
 	"DbgName" : "PURIFIED_WATER_0"
 	}],
