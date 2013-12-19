@@ -51,6 +51,10 @@
   loader.load('./obj/mapas/map.js', function (geometry, materials) {
     var mesh, material;
 
+    //tercer intento
+    //var myColor = 0x4e4e4e;
+    //mesh.material.color.setHex( myColor );
+
     material = new THREE.MeshFaceMaterial(materials);
     mesh = new THREE.Mesh(geometry, material);
 
@@ -58,12 +62,13 @@
     mesh.receiveShadow = true;
     mesh.castShadow = true;
 
-    //tercer intento
-    //var myColor = 0x4e4e4e;
-    //mesh.material.color.setHex( myColor );
-
     scene.add(mesh);
   });
+
+  function changeMaterial(colorHex){
+    mesh.material.color.setHex(colorHex);
+  };
+  changeMaterial('0xda30ff');
 
   
 
