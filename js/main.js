@@ -49,33 +49,20 @@
   loader = new THREE.JSONLoader();
 
   loader.load('./obj/mapas/map.js', function (geometry, materials) {
-    
     var mesh, material;
 
-    var myColor 0x4e4e4e;
-
-
-    //INTENTO 1
-      // initialize color variable
-      // var color = new THREE.Color( "#4E4E4E" );
-      // var hex = color.getHex();
-      // material = new THREE.MeshFaceMaterial( { color: hex } );
-
     material = new THREE.MeshFaceMaterial(materials);
-
     mesh = new THREE.Mesh(geometry, material);
 
     mesh.scale.set(1, 1, 1);
     mesh.receiveShadow = true;
     mesh.castShadow = true;
 
-    
-    
-
     scene.add(mesh);
-
   });
+
   //tercer intento
+  var myColor 0x4e4e4e;
   mesh.material.color.setHex( myColor );
 
   //lights
