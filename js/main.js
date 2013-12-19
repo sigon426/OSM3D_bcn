@@ -54,12 +54,6 @@
 
     var myColor 0x4e4e4e;
 
-    //INTENTO2:
-    for ( var i = 0; i < geometry.faces.length; i ++ ) {
-      geometry.faces[ i ].color.setHex( Math.random() * myColor );
-    }
-
-    material = new THREE.MeshBasicMaterial( { color: myColor, vertexColors: THREE.FaceColors } )
 
     //INTENTO 1
       // initialize color variable
@@ -67,7 +61,7 @@
       // var hex = color.getHex();
       // material = new THREE.MeshFaceMaterial( { color: hex } );
 
-    //material = new THREE.MeshFaceMaterial(materials);
+    material = new THREE.MeshFaceMaterial(materials);
 
     mesh = new THREE.Mesh(geometry, material);
 
@@ -81,6 +75,8 @@
     scene.add(mesh);
 
   });
+  //tercer intento
+  mesh.material.color.setHex( myColor );
 
   //lights
   light = new THREE.DirectionalLight(0xffffff);
