@@ -52,12 +52,22 @@
     
     var mesh, material;
 
-    // initialize color variable
-    // var color = new THREE.Color( "#4E4E4E" );
-    // var hex = color.getHex();
-    // material = new THREE.MeshFaceMaterial( { color: hex } );
+    var myColor 0x4e4e4e;
 
-    material = new THREE.MeshFaceMaterial(materials);
+    //INTENTO2:
+    for ( var i = 0; i < geometry.faces.length; i ++ ) {
+      geometry.faces[ i ].color.setHex( Math.random() * myColor );
+    }
+
+    material = new THREE.MeshBasicMaterial( { color: myColor, vertexColors: THREE.FaceColors } )
+
+    //INTENTO 1
+      // initialize color variable
+      // var color = new THREE.Color( "#4E4E4E" );
+      // var hex = color.getHex();
+      // material = new THREE.MeshFaceMaterial( { color: hex } );
+
+    //material = new THREE.MeshFaceMaterial(materials);
 
     mesh = new THREE.Mesh(geometry, material);
 
