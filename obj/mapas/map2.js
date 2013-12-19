@@ -166,7 +166,7 @@
 	},
 
 	{
-	"DbgColor" : 9686361,
+	"DbgColor" : 0x00ee00,
 	"DbgIndex" : 25,
 	"DbgName" : "BUILDING_DEFAULT_0"
 	},
