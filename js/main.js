@@ -59,8 +59,8 @@
     mesh.castShadow = true;
 
     //tercer intento
-    var myColor = 0x4e4e4e;
-    mesh.material.color.setHex( myColor );
+    //var myColor = 0x4e4e4e;
+    //mesh.material.color.setHex( myColor );
 
     scene.add(mesh);
   });
