@@ -48,9 +48,9 @@
 
   loader = new THREE.JSONLoader();
 
-  loader.load('./obj/mapas/map.js', function (geometry, materials) {
+  loader.load('./obj/mapas/map2.js', function (geometry, materials) {
     var mesh, material;
-
+    console.log(materials)
     //tercer intento
     //var myColor = 0x4e4e4e;
     //mesh.material.color.setHex( myColor );
@@ -65,10 +65,7 @@
     scene.add(mesh);
   });
 
-  function changeMaterial(colorHex){
-    mesh.material.color.setHex(colorHex);
-  };
-  changeMaterial('0xda30ff');
+  
 
   
 
