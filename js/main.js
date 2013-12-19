@@ -7,11 +7,13 @@
   // set the scene size
   var WIDTH = window.innerWidth,
       HEIGHT = window.innerHeight;
+
   // set some camera attributes
   var VIEW_ANGLE = 45,
       ASPECT = WIDTH / HEIGHT,
       NEAR = 1,
       FAR = 10000;
+
   //create a scene
   scene = new THREE.Scene();
   
@@ -24,7 +26,7 @@
 
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
-  // the camera starts at 0,0,0 (change x y z....)
+  // the camera starts at x y z
   camera.position.y = 1200;
   camera.position.x = 1000;
   camera.position.z = 1800;
@@ -33,6 +35,7 @@
   scene.add(camera);
 
   controls = new THREE.OrbitControls(camera);
+
   //How far you can orbit vertically, upper and lower limits.
   controls.maxPolarAngle = Math.PI/2.1; 
   
@@ -46,16 +49,27 @@
   loader = new THREE.JSONLoader();
 
   loader.load('./obj/mapas/map.js', function (geometry, materials) {
+    
     var mesh, material;
 
-    material = new THREE.MeshFaceMaterial(materials);
+    // initialize color variable
+    var color = new THREE.Color( "#4E4E4E" );
+    var hex = color.getHex();
+    material = new THREE.MeshFaceMaterial( { color: hex } );
+
+    //material = new THREE.MeshFaceMaterial(materials);
+
     mesh = new THREE.Mesh(geometry, material);
 
     mesh.scale.set(1, 1, 1);
     mesh.receiveShadow = true;
     mesh.castShadow = true;
 
+    
+    
+
     scene.add(mesh);
+
   });
 
   //lights
