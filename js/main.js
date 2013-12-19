@@ -62,7 +62,7 @@
   });
 
   //tercer intento
-  var myColor 0x4e4e4e;
+  var myColor = 0x4e4e4e;
   mesh.material.color.setHex( myColor );
 
   //lights
