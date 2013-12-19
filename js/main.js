@@ -53,11 +53,11 @@
     var mesh, material;
 
     // initialize color variable
-    var color = new THREE.Color( "#4E4E4E" );
-    var hex = color.getHex();
-    material = new THREE.MeshFaceMaterial( { color: hex } );
+    // var color = new THREE.Color( "#4E4E4E" );
+    // var hex = color.getHex();
+    // material = new THREE.MeshFaceMaterial( { color: hex } );
 
-    //material = new THREE.MeshFaceMaterial(materials);
+    material = new THREE.MeshFaceMaterial(materials);
 
     mesh = new THREE.Mesh(geometry, material);
 
