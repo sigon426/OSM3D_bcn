@@ -58,12 +58,14 @@
     mesh.receiveShadow = true;
     mesh.castShadow = true;
 
+    //tercer intento
+    var myColor = 0x4e4e4e;
+    mesh.material.color.setHex( myColor );
+
     scene.add(mesh);
   });
 
-  //tercer intento
-  var myColor = 0x4e4e4e;
-  mesh.material.color.setHex( myColor );
+  
 
   //lights
   light = new THREE.DirectionalLight(0xffffff);
