@@ -16,7 +16,7 @@
     "scale" : 1.000000,
 
     "materials": [	{
-	"DbgColor" : 5131854,
+	"DbgColor" : 7368816,
 	"DbgIndex" : 0,
 	"DbgName" : "ASPHALT_0"
 	},
