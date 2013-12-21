@@ -24,6 +24,7 @@
   renderer.shadowMapType = THREE.PCFShadowMap;
   renderer.shadowMapAutoUpdate = true;
 
+  // new THREE.PerspectiveCamera( FOV, viewAspectRatio, zNear, zFar );
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
   // the camera starts at x y z
