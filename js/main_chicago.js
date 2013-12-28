@@ -31,9 +31,7 @@
   camera.position.y = 1200;
   camera.position.x = 800;
   camera.position.z = 1800;
-  console.log(camera.position.x);
-  console.log(camera.position.y);
-  console.log(camera.position.z);
+
 
   // add the camera to the scene
   scene.add(camera);
@@ -89,7 +87,7 @@
 
 
   //stats 
-/*  var stats = new Stats();
+  var stats = new Stats();
   stats.setMode(1); // 0: fps, 1: ms
 
   // Align top-left
@@ -108,7 +106,7 @@
 
       stats.end();
 
-  }, 1000 / 60 );*/
+  }, 1000 / 60 );
 
 
   scene.add(light);
@@ -120,8 +118,11 @@
     renderer.render(scene, camera);
     controls.update();
     requestAnimationFrame(animate);
-
-    //stats.update();
+    
+    console.log(camera.position.x);
+    console.log(camera.position.y);
+    console.log(camera.position.z);
+    stats.update();
 
   }
 
