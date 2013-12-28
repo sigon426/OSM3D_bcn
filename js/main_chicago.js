@@ -87,7 +87,7 @@
 
 
   //stats 
-  var stats = new Stats();
+/*  var stats = new Stats();
   stats.setMode(1); // 0: fps, 1: ms
 
   // Align top-left
@@ -107,7 +107,7 @@
       stats.end();
 
   }, 1000 / 60 );
-
+*/
 
   scene.add(light);
 
@@ -118,11 +118,11 @@
     renderer.render(scene, camera);
     controls.update();
     requestAnimationFrame(animate);
-    
+
     console.log(camera.position.x);
     console.log(camera.position.y);
     console.log(camera.position.z);
-    stats.update();
+    //stats.update();
 
   }
 
