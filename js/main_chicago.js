@@ -24,6 +24,7 @@
   renderer.shadowMapType = THREE.PCFShadowMap;
   renderer.shadowMapAutoUpdate = true;
 
+  // new THREE.PerspectiveCamera( FOV, viewAspectRatio, zNear, zFar );
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
   // the camera starts at x y z
@@ -34,7 +35,7 @@
   // add the camera to the scene
   scene.add(camera);
 
-  controls = new THREE.TrackballControls(camera);
+  controls = new THREE.OrbitControls(camera);
 
   //How far you can orbit vertically, upper and lower limits.
   controls.maxPolarAngle = Math.PI/2.1; 
@@ -48,7 +49,7 @@
 
   loader = new THREE.JSONLoader();
 
-  loader.load('./obj/mapas/map2.js', function (geometry, materials) {
+  loader.load('./obj/mapas/chicago.js', function (geometry, materials) {
     var mesh, material;
     console.log(materials)
     //tercer intento
