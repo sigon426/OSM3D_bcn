@@ -28,9 +28,9 @@
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
   // the camera starts at x y z
-  camera.position.y = 1200;
-  camera.position.x = 800;
-  camera.position.z = 1800;
+  camera.position.y = 750;
+  camera.position.x = 1100;
+  camera.position.z = 1100;
 
 
   // add the camera to the scene
@@ -53,9 +53,6 @@
   loader.load('./obj/mapas/chicago.js', function (geometry, materials) {
     var mesh, material;
     console.log(materials)
-    //tercer intento
-    //var myColor = 0x4e4e4e;
-    //mesh.material.color.setHex( myColor );
 
     material = new THREE.MeshFaceMaterial(materials);
     mesh = new THREE.Mesh(geometry, material);
