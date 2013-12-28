@@ -50,7 +50,7 @@
 
   loader = new THREE.JSONLoader();
 
-  loader.load('./obj/mapas/chicago2.js', function (geometry, materials) {
+  loader.load('./obj/mapas/chicago3.js', function (geometry, materials) {
     var mesh, material;
     console.log(materials)
 
