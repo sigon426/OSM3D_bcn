@@ -29,8 +29,11 @@
   
   // the camera starts at x y z
   camera.position.y = 1200;
-  camera.position.x = 1000;
+  camera.position.x = 800;
   camera.position.z = 1800;
+  console.log(camera.position.x);
+  console.log(camera.position.y);
+  console.log(camera.position.z);
 
   // add the camera to the scene
   scene.add(camera);
