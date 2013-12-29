@@ -28,9 +28,9 @@
   camera = new THREE.PerspectiveCamera(VIEW_ANGLE, ASPECT, NEAR, FAR);
   
   // the camera starts at x y z
-  camera.position.y = 2300;
-  camera.position.x = 1700;
-  camera.position.z = 1300;
+  camera.position.x = -1600;
+  camera.position.y =  1250;
+  camera.position.z =  1600;
 
 
   // add the camera to the scene
