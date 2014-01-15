@@ -49,7 +49,7 @@
 
   loader = new THREE.JSONLoader();
 
-  loader.load('./obj/mapas/map_b.js', function (geometry, materials) {
+  loader.load('./obj/mapas/map2.js', function (geometry, materials) {
     var mesh, material;
     console.log(materials)
     //tercer intento
